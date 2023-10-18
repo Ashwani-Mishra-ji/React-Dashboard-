@@ -1,0 +1,345 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: lightpink;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+}
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+}
+.icon, .icon_header {
+  margin-right: 5px;
+}
+
+.close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+  height: 100vh;
+}
+
+/* Header  */
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  /* box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35); */
+}
+
+.menu-icon {
+  display: none;
+}
+/* End Header  */
+
+/* Sidebar  */
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #263043;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.value{
+  text-decoration: #36364c;
+  display: none;
+  
+}
+.sidebar-title > span1 {
+  display: none;
+}
+.sidebar-title >   value{
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #9e9ea4;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+
+/* End Sidebar  */
+
+
+/* Main  */  
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+  color: rgba(255, 255, 255, 0.95);
+  background: #F5F5F5;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+  color: #1d2634;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border-width: 2px;
+  height: 100px;
+ 
+}
+
+.circle {
+  background-image: radial-gradient(circle, #dedbd8, #66f892 66%, transparent 66%);
+  height: 5em;
+  width: 5em;
+}
+.circle1{
+  background-image: radial-gradient(circle, #dedbd8, #de20c8 66%, transparent 66%);
+  height: 5em;
+  width: 5em;
+
+}
+.circle3{
+  background-image: radial-gradient(circle, #dedbd8, #669ef8 66%, transparent 66%);
+  height: 5em;
+  width: 5em;
+
+}
+.circle4{
+  background-image: radial-gradient(circle, #dedbd8, #f86666 66%, transparent 66%);
+  height: 5em;
+  width: 5em;
+
+}
+
+.card:first-child {
+  background-color: white;
+}
+
+.card:nth-child(2) {
+  background-color: white;
+}
+
+.card:nth-child(3) {
+  background-color: white;
+
+}
+
+.card:nth-child(4) {
+  background-color: white;
+
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.card-inner > .card_icon {
+  font-size: 30px;
+}
+
+.charts {
+  display: flex;
+ 
+}
+
+/* footer section */
+.footer{
+ 
+  border-radius: 5px;
+  height :220px;
+  border-width: 2px;
+ background-color: aquamarine;
+}
+.Mini{
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  height : 5vh;
+  border-width: 2px;
+  width:80vw;
+  border-bottom: #9e9ea4;
+}
+.center{
+  justify-content: space-between;
+  display: flex;
+
+}
+
+.search{
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  
+}
+.Final{
+  border-radius: 5px;
+  height :59px;
+  border-width: 2px;
+  width: 1220px;
+
+}
+.image{
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  
+}
+.image-1{
+ height: 50px;
+ width: 50px;
+}
+.rounded{
+ border-radius: 7px;
+}
+
+/* log in  */
+.log-in{
+  background-color: blue;
+  margin-left: 20px;
+  margin-top: 200px;
+  border-radius: 5px;
+  height :35px;
+  border-width: 2px;
+  width: 170px;
+}
+
+/* End Main  */
+
+
+/* Medium <= 992px */
+  
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+  
+
+  .chartContainers{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+/* Small <= 768px */
+  
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+  .footer{
+    width: 700px;
+    border-width:7px ;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+
+  main{
+    overflow-x: hidden;
+  }
+  .footer{
+    width: 600px;
+    border-width:1px ;
+
+  }
+}
